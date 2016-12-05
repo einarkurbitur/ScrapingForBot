@@ -32,8 +32,19 @@ def filter_tweet(text):
     text = re.sub(r'\xe9', 'e', text) #take out accented e
     return text
 
-txtfile = 'southparktweets.txt'
 
-for t in txtfile:
-    filter_tweet
-    
+def filter_lines(lines):
+    """ Filters multiple lines.
+    Should be given a list os strings:
+    E.g.
+        [
+          'tweet one.',
+          'tweet two,',
+          'tweet three'
+        ]
+    """
+    outlines = []
+    for line in lines:
+        outlines.append(filter_tweet(line))
+    outtext = "/n".join(outlines)
+    return outtext
