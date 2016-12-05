@@ -32,8 +32,8 @@ def filter_tweet(text):
     text = re.sub(r'\xe9', 'e', text) #take out accented e
     return text
 
-txtfile = 'southparktweets.txt'
-
-for t in txtfile:
-    filter_tweet
+#txtfile = 'southparktweets.txt'
+#
+#for t in txtfile:
+#    filter_tweet
     
